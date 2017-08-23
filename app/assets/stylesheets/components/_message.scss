@@ -1,0 +1,30 @@
+.messages {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.message {
+  display: flex;
+  margin-bottom: 10px;
+  &.right {
+    flex-direction: row-reverse;
+    .message-content {
+      background-color: #F2F9FC;
+    }
+  }
+}
+.message-content {
+  background-color: #F7F7F7;
+  border-radius: 3px;
+  margin: 0 10px;
+  padding: 8px 10px;
+  font-size: 14px;
+  color: #868686;
+}
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}

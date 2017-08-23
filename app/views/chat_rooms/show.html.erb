@@ -1,2 +1,15 @@
-<h3><%= @chat_room.name %></h3>
-
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+      <h3><%= @chat_room.name %></h3>
+      <div class="messages">
+        <% @chat_room.messages.each do |message| %>
+          <div class="message <%= message.from?(current_user) ? "right" : "" %>">
+            <%= image_tag message.user.avatar_url, class: "avatar" %>
+            <div class="message-content"><%= message.content %></div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
