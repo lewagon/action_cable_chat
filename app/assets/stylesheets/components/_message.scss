@@ -3,6 +3,8 @@
   flex-direction: column;
   background-color: #ffffff;
   padding: 20px;
+  border: 1px solid #ececec;
+  border-bottom-width: 0;
 }
 
 .message {
@@ -27,4 +29,23 @@
   width: 42px;
   height: 42px;
   border-radius: 50%;
+}
+
+#create-message {
+  padding: 10px;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  border: 1px solid #ececec;
+}
+.message_content {
+  margin-bottom: 0;
+}
+input.form-control {
+  border: 1px solid #ECECEC;
+  box-shadow: none;
+  &:focus {
+    outline: none;
+    border: 1px solid blue;
+    box-shadow: none;
+  }
 }
