@@ -5,9 +5,15 @@ class MessagesController < ApplicationController
     @message.chat_room = @chat_room
     @message.user = current_user
     if @message.save
-      redirect_to chat_room_path(@chat_room)
+      respond_to do |format|
+        format.html { redirect_to chat_room_path(@chat_room) }
+        format.js
+      end
     else
-      render "chat_rooms/show"
+      respond_to do |format|
+        format.html { render "chat_rooms/show" }
+        format.js
+      end
     end
   end
 

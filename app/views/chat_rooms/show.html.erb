@@ -4,14 +4,11 @@
       <h3>#<%= @chat_room.name %></h3>
       <div class="messages">
         <% @chat_room.messages.each do |message| %>
-          <div class="message <%= message.from?(current_user) ? "right" : "" %>">
-            <%= image_tag message.user.avatar_url, class: "avatar" %>
-            <div class="message-content"><%= message.content %></div>
-          </div>
+          <%= render "messages/message", message: message %>
         <% end %>
       </div>
       <div id="create-message">
-        <%= simple_form_for [@chat_room, Message.new] do |f| %>
+        <%= simple_form_for [@chat_room, Message.new], remote: true do |f| %>
           <%= f.input :content, label: false %>
         <% end %>
       </div>

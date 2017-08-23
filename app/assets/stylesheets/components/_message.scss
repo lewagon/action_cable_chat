@@ -1,10 +1,10 @@
 .messages {
-  display: flex;
-  flex-direction: column;
   background-color: #ffffff;
   padding: 20px;
   border: 1px solid #ececec;
   border-bottom-width: 0;
+  max-height: calc(100vh - 70px - 34px - 61px);
+  overflow: scroll;
 }
 
 .message {
