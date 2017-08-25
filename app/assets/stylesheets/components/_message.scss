@@ -1,4 +1,6 @@
 .messages {
+  font-size: 14px;
+  color: #868686;
   background-color: #ffffff;
   padding: 20px;
   border: 1px solid #ececec;
@@ -22,8 +24,6 @@
   border-radius: 3px;
   margin: 0 10px;
   padding: 8px 10px;
-  font-size: 14px;
-  color: #868686;
 }
 .avatar {
   width: 42px;
@@ -43,6 +43,8 @@
 input.form-control {
   border: 1px solid #ECECEC;
   box-shadow: none;
+  font-size: 14px;
+  color: #868686;
   &:focus {
     outline: none;
     border: 1px solid blue;
