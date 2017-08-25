@@ -4,6 +4,7 @@
   background-color: #ffffff;
   padding: 20px;
   border: 1px solid #ececec;
+  border-top: none;
   border-bottom-width: 0;
   max-height: calc(100vh - 70px - 34px - 61px);
   overflow: scroll;
@@ -49,5 +50,14 @@ input.form-control {
     outline: none;
     border: 1px solid blue;
     box-shadow: none;
+  }
+}
+.chat-header {
+  background-color: #4F2F4C;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 10px;
+  h4 {
+    margin: 0;
   }
 }
