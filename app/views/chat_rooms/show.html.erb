@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-6 col-xs-offset-3">
+    <div class="col-sm-6 col-sm-offset-3">
       <div class="chat-header"><h4>#<%= @chat_room.name %></h4></div>
       <div class="messages">
         <% @chat_room.messages.each do |message| %>
@@ -8,7 +8,7 @@
         <% end %>
       </div>
       <div id="create-message">
-        <%= simple_form_for [@chat_room, Message.new], remote: true do |f| %>
+        <%= simple_form_for [ @chat_room, Message.new ], remote: true do |f| %>
           <%= f.input :content, label: false %>
         <% end %>
       </div>
