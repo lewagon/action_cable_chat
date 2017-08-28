@@ -15,3 +15,12 @@
     </div>
   </div>
 </div>
+<% content_for :after_js do %>
+  <script>
+    App['chat_room_<%= @chat_room.id %>'] = App.cable.subscriptions.create({ channel: 'ChatRoomsChannel', chat_room_id: <%= @chat_room.id %> }, {
+      received: (data) => {
+        console.log(data);
+      }
+    })
+  </script>
+<% end %>
