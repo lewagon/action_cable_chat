@@ -8,7 +8,7 @@
         <% end %>
       </div>
       <div id="create-message">
-        <%= simple_form_for [ @chat_room, Message.new ], remote: true do |f| %>
+        <%= simple_form_for [ @chat_room, Message.new ], remote: true, html: {autocomplete: "off" } do |f| %>
           <%= f.input :content, label: false %>
         <% end %>
       </div>
