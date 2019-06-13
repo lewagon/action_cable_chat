@@ -1,10 +1,15 @@
-<% if @message.errors.any? %>
-  // handle validation errors later
-<% else %>
+function insertMessage(message) {
   const messagesContainer = document.querySelector('.messages');
-  messagesContainer.insertAdjacentHTML('beforeend', '<%= j render "message", message: @message, user_is_messages_author: true %>');
+  messagesContainer.insertAdjacentHTML('beforeend', message);
   const input = document.querySelector('#message_content');
   input.value = '';
   input.blur();
   scrollLastMessageIntoView();
+}
+
+
+<% if @message.errors.any? %>
+  // handle validation errors later
+<% else %>
+  insertMessage('<%= j render "message", message: @message, user_is_messages_author: true %>');
 <% end %>
